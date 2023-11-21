@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Полезные Ресурсы</title>
+</head>
+<body>
+    <header>
+        <h1>Полезные Ресурсы</h1>
+    </header>
+    <main>
+        <section id="resources-list">
+            <!-- Ресурсы будут загружены сюда с использованием JavaScript -->
+        </section>
+        <section id="add-resource">
+            <h2>Добавить Ресурс</h2>
+            <form id="resource-form">
+                <label for="resource-name">Название:</label>
+                <input type="text" id="resource-name" required>
+                <label for="resource-link">Ссылка:</label>
+                <input type="url" id="resource-link" required>
+                <button type="button" onclick="addResource()">Добавить</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Полезные Ресурсы</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
