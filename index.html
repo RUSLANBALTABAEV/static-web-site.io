@@ -3,35 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Список полезных информационных ресурсов и источников</title>
-    <!-- Google fonts -->
-    <link href="//fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>DevOps инженер - Сайт-Визитка</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Полезные Ресурсы</h1>
+        <h1>Руслан Балтабаев</h1>
+        <p>DevOps-инженер, стремлюсь к автоматизации и эффективному управлению IT-процессами</p>
     </header>
-    <main>
-        <section id="resources-list">
-            <!-- Ресурсы будут загружены сюда с использованием JavaScript -->
-        </section>
-        <section id="add-resource">
-            <h2>Добавить Ресурс</h2>
-            <form id="resource-form">
-                <label for="resource-name">Название:</label>
-                <input type="text" id="resource-name" required>
-                <label for="resource-link">Ссылка:</label>
-                <input type="url" id="resource-link" required>
-                <button type="button" onclick="addResource()">Добавить</button>
-            </form>
-        </section>
-    </main>
+
+    <section>
+        <h2>Обо мне</h2>
+        <!-- Замените этот текст на информацию о вас -->
+        <p>Начинающий DevOps-инженер с интересом к автоматизации, управлению конфигурациями и облачным технологиям. Готов к изучению новых инструментов и решению сложных задач для оптимизации процессов разработки и внедрения.</p>
+
+        <h2>Услуги</h2>
+        <ul>
+            <li onclick="showService('service1')">Управление конфигурациями</li>
+            <li onclick="showService('service2')">Автоматизация процессов</li>
+            <li onclick="showService('service3')">Облачные технологии</li>
+        </ul>
+        <div id="service1" class="service-content">
+            <h3>Управление конфигурациями</h3>
+            <p>
+                Предоставление экспертной поддержки в области управления конфигурациями для обеспечения стабильности и надежности развертываний программного обеспечения. Внедрение систем контроля версий, создание конфигураций и управление изменениями в реальном времени.
+            </p>
+        </div>
+
+        <div id="service2" class="service-content">
+            <h3>Автоматизация процессов</h3>
+            <p>
+                Разработка и внедрение автоматизированных процессов в рамках цикла разработки, тестирования и развертывания ПО. Использование современных инструментов и методологий для повышения эффективности, снижения ошибок и сокращения времени между изменениями и их внедрением.
+            </p>
+        </div>
+
+        <div id="service3" class="service-content">
+            <h3>Облачные технологии</h3>
+            <p>
+                Экспертиза в области облачных вычислений, включая развертывание, управление и оптимизацию облачной инфраструктуры. Работа с популярными облачными платформами, такими как AWS, Azure, или Google Cloud, для обеспечения масштабируемости и отказоустойчивости приложений.
+            </p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
     <footer>
-        <p>&copy; 2023 Полезные Ресурсы</p>
+        <!-- Замените эти контактные данные на свои собственные -->
+        <p>Email: ruslanotoriuos@gmail.com | Телефон: +7 (778) 581-9575</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
