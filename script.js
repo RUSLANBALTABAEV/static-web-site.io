@@ -1,51 +1,18 @@
-// Пример данных для ресурсов (может быть получено с сервера или других источников)
-let resourcesData = [
-    { name: 'MDN Web Docs', link: 'https://developer.mozilla.org/' },
-    { name: 'GitHub', link: 'https://github.com/' },
-    // Добавьте дополнительные ресурсы по вашему усмотрению
-];
+function animateService(element) {
+    element.classList.add('animated');
+    setTimeout(() => {
+        element.classList.remove('animated');
+    }, 300);
+}
 
-// Функция для отображения ресурсов
-function displayResources() {
-    const resourcesList = document.getElementById('resources-list');
-
-    resourcesData.forEach(resource => {
-        const resourceElement = document.createElement('div');
-        resourceElement.classList.add('resource');
-
-        const nameElement = document.createElement('h3');
-        nameElement.textContent = resource.name;
-
-        const linkElement = document.createElement('a');
-        linkElement.href = resource.link;
-        linkElement.textContent = resource.link;
-        linkElement.target = '_blank'; // Открывать в новой вкладке
-
-        resourceElement.appendChild(nameElement);
-        resourceElement.appendChild(linkElement);
-        resourcesList.appendChild(resourceElement);
+function showService(serviceId) {
+    // Скрываем все услуги
+    const allServices = document.querySelectorAll('.service-content');
+    allServices.forEach(service => {
+        service.classList.remove('active');
     });
+
+    // Показываем выбранную услугу
+    const selectedService = document.getElementById(serviceId);
+    selectedService.classList.add('active');
 }
-
-// Функция для добавления нового ресурса
-function addResource() {
-    const resourceName = document.getElementById('resource-name').value;
-    const resourceLink = document.getElementById('resource-link').value;
-
-    if (resourceName && resourceLink) {
-        const newResource = { name: resourceName, link: resourceLink };
-        resourcesData.push(newResource);
-
-        // Очистка формы
-        document.getElementById('resource-form').reset();
-
-        // Очистка списка и повторное отображение
-        document.getElementById('resources-list').innerHTML = '';
-        displayResources();
-    } else {
-        alert('Заполните все поля формы.');
-    }
-}
-
-// Загрузка и отображение ресурсов при загрузке страницы
-window.onload = displayResources;
