@@ -52,3 +52,7 @@ li:hover {
 .service-content.active {
     display: block;
 }
+
+a {
+    text-decoration: none;
+}
