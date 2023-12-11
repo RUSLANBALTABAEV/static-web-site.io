@@ -15,17 +15,22 @@
     <h2 align="center"><a href="feedback_form.html">Форма обратной связи</a></h2>
     <section>
         <h2 onclick="toggleContent('achievements')" align="center">Достижения</h2>
-        <ul id="achievements-list" class="hidden">
-            <li>Завершил курс по Введение в программирование через Golang от BTS Education <a href="documents/Введение в программирование через Golang - Балтабаев Руслан.pdf"> посмотреть</a></li>
-            <li>Завершил курс Programming for Everybody (Getting Started with Python) - RUSLAN BALTABAEV от Coursera <a href="documents/Programming for Everybody (Getting Started with Python) - RUSLAN BALTABAEV.pdf"> посмотреть</a></li>
-            <li>Завершил курс Detecting and Mitigating Cyber Threats and Attacks - RUSLAN BALTABAEV от Coursera <a href="documents/Detecting and Mitigating Cyber Threats and Attacks - RUSLAN BALTABAEV.pdf"> посмотреть</a></li>
-            <li>Завершил курс Балтабаев Руслан CS - 302 - GeekBrains Git. Базовый курс от GeekBrains <a href="documents/Балтабаев Руслан CS - 302 - GeekBrains Git. Базовый курс.ru.pdf"> посмортеть</a></li>
-            <li>Завершил курс Docker для начинающих + практический опыт от stepik <a href="documents/stepik-certificate-123300-e6cb5d9_ru.pdf"> посмотреть</a></li>
-        </ul>
-    </section>
+        <div class="carousel-container">
+            <ul id="achievements-list" class="hidden">
+                <li>Завершил курс по Введение в программирование через Golang от BTS Education <a href="documents/Введение в программирование через Golang - Балтабаев Руслан.pdf"> посмотреть</a></li>
+                <li>Завершил курс Programming for Everybody (Getting Started with Python) - RUSLAN BALTABAEV от Coursera <a href="documents/Programming for Everybody (Getting Started with Python) - RUSLAN BALTABAEV.pdf"> посмотреть</a></li>
+                <li>Завершил курс Detecting and Mitigating Cyber Threats and Attacks - RUSLAN BALTABAEV от Coursera <a href="documents/Detecting and Mitigating Cyber Threats and Attacks - RUSLAN BALTABAEV.pdf"> посмотреть</a></li>
+                <li>Завершил курс Балтабаев Руслан CS - 302 - GeekBrains Git. Базовый курс от GeekBrains <a href="documents/Балтабаев Руслан CS - 302 - GeekBrains Git. Базовый курс.ru.pdf"> посмотреть</a></li>
+                <li>Завершил курс Docker для начинающих + практический опыт от stepik <a href="documents/stepik-certificate-123300-e6cb5d9_ru.pdf"> посмотреть</a></li>
+            </ul>
+            <div class="button-container">
+                <button class="carousel-prev" onclick="prevAchievement()">&#9665;</button>
+                <button class="carousel-next" onclick="nextAchievement()">&#9655;</button>
+            </div>
+        </div>
+    </section>                
     <section>
         <h2>Обо мне</h2>
-        <!-- Замените этот текст на информацию о вас -->
         <p>Начинающий DevOps-инженер с интересом к автоматизации, управлению конфигурациями и облачным технологиям. Готов к изучению новых инструментов и решению сложных задач для оптимизации процессов разработки и внедрения.</p>
         <h2>Услуги</h2>
         <ul>

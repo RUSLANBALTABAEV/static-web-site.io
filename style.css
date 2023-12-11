@@ -36,15 +36,6 @@ ul {
     padding: 0;
 }
 
-li {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-li:hover {
-    transform: scale(1.1);
-}
-
 .service-content {
     display: none;
 }
@@ -56,4 +47,42 @@ li:hover {
 a {
     text-decoration: none;
     color: black;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+#achievements-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+#achievements-list li {
+    min-width: 100%;
+}
+
+#achievements-list li.hidden {
+    display: none;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+}
+
+.carousel-prev, .carousel-next {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
 }
