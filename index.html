@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps инженер - Я Руслан Балтабаев</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <img src="assets/images/profile.png" width="500" height="500">
         <h1>Руслан Балтабаев</h1>
         <p>DevOps-инженер, стремлюсь к автоматизации и эффективному управлению IT-процессами</p>
     </header>
-    <h2 align="center"><a href="feedback_form.html">Форма обратной связи</a></h2>
+
     <section>
         <h2 onclick="toggleContent('achievements')" align="center">Достижения</h2>
         <div class="carousel-container">
-            <ul id="achievements-list" class="hidden">
-                <li>Завершил курс по Введение в программирование через Golang от BTS Education <a href="documents/Введение в программирование через Golang - Балтабаев Руслан.pdf"> посмотреть</a></li>
-                <li>Завершил курс Programming for Everybody (Getting Started with Python) - RUSLAN BALTABAEV от Coursera <a href="documents/Programming for Everybody (Getting Started with Python) - RUSLAN BALTABAEV.pdf"> посмотреть</a></li>
-                <li>Завершил курс Detecting and Mitigating Cyber Threats and Attacks - RUSLAN BALTABAEV от Coursera <a href="documents/Detecting and Mitigating Cyber Threats and Attacks - RUSLAN BALTABAEV.pdf"> посмотреть</a></li>
-                <li>Завершил курс Балтабаев Руслан CS - 302 - GeekBrains Git. Базовый курс от GeekBrains <a href="documents/Балтабаев Руслан CS - 302 - GeekBrains Git. Базовый курс.ru.pdf"> посмотреть</a></li>    
-                <li>Завершил курс Docker для начинающих + практический опыт от stepik <a href="documents/stepik-certificate-123300-e6cb5d9_ru.pdf"> посмотреть</a></li>
+            <ul id="achievements-list">
+                <li class="achievement-item"><img src="images/Снимок экрана 2023-12-11 124110.png"><a
+                        href="documents/Введение в программирование через Golang - Балтабаев Руслан.pdf"> посмотреть</a></li>
+                <li class="achievement-item"><img src="images/Снимок экрана 2023-12-11 124246.png"><a
+                        href="documents/Programming for Everybody (Getting Started with Python) - RUSLAN BALTABAEV.pdf"> посмотреть</a>
+                </li>
+                <li class="achievement-item"><img src="images/Снимок экрана 2023-12-11 124339.png"><a
+                        href="documents/Detecting and Mitigating Cyber Threats and Attacks - RUSLAN BALTABAEV.pdf"> посмотреть</a>
+                </li>
+                <li class="achievement-item"><img src="images/Снимок экрана 2023-12-11 124424.png"><a
+                        href="documents/Балтабаев Руслан CS - 302 - GeekBrains Git. Базовый курс.ru.pdf"> посмотреть</a></li>
+                <li class="achievement-item"><img src="images/Снимок экрана 2023-12-11 124506.png"><a
+                        href="documents/stepik-certificate-123300-e6cb5d9_ru.pdf"> посмотреть</a></li>
             </ul>
             <div class="button-container">
                 <button class="carousel-prev" onclick="prevAchievement()">&#9665;</button>
                 <button class="carousel-next" onclick="nextAchievement()">&#9655;</button>
             </div>
         </div>
-    </section>                
+    </section>
+
     <section>
         <h2>Обо мне</h2>
-        <p>Начинающий DevOps-инженер с интересом к автоматизации, управлению конфигурациями и облачным технологиям. Готов к изучению новых инструментов и решению сложных задач для оптимизации процессов разработки и внедрения.</p>
+        <p>Начинающий DevOps-инженер с интересом к автоматизации, управлению конфигурациями и облачным технологиям.
+            Готов к изучению новых инструментов и решению сложных задач для оптимизации процессов разработки и
+            внедрения.</p>
         <h2>Услуги</h2>
         <ul>
             <li onclick="showService('service1')">Управление конфигурациями</li>
@@ -40,33 +52,44 @@
         </ul>
         <div id="service1" class="service-content">
             <h3>Управление конфигурациями</h3>
-            <p>
-                Предоставление экспертной поддержки в области управления конфигурациями для обеспечения стабильности и надежности развертываний программного обеспечения. Внедрение систем контроля версий, создание конфигураций и управление изменениями в реальном времени.
-            </p>
+            <p>Предоставление экспертной поддержки в области управления конфигурациями для обеспечения стабильности и
+                надежности развертываний программного обеспечения. Внедрение систем контроля версий, создание
+                конфигураций и управление изменениями в реальном времени.</p>
         </div>
         <div id="service2" class="service-content">
             <h3>Автоматизация процессов</h3>
-            <p>
-                Разработка и внедрение автоматизированных процессов в рамках цикла разработки, тестирования и развертывания ПО. Использование современных инструментов и методологий для повышения эффективности, снижения ошибок и сокращения времени между изменениями и их внедрением.
-            </p>
+            <p>Разработка и внедрение автоматизированных процессов в рамках цикла разработки, тестирования и
+                развертывания ПО. Использование современных инструментов и методологий для повышения эффективности,
+                снижения ошибок и сокращения времени между изменениями и их внедрением.</p>
         </div>
         <div id="service3" class="service-content">
             <h3>Облачные технологии</h3>
-            <p>
-                Экспертиза в области облачных вычислений, включая развертывание, управление и оптимизацию облачной инфраструктуры. Работа с популярными облачными платформами, такими как AWS, Azure, или Google Cloud, для обеспечения масштабируемости и отказоустойчивости приложений.
-            </p>
+            <p>Экспертиза в области облачных вычислений, включая развертывание, управление и оптимизацию облачной
+                инфраструктуры. Работа с популярными облачными платформами, такими как AWS, Azure, или Google Cloud, для
+                обеспечения масштабируемости и отказоустойчивости приложений.</p>
         </div>
     </section>
+
     <script src="script.js"></script>
+
     <footer>
-        <!-- Замените эти контактные данные на свои собственные -->
         <p>Email: ruslanotoriuos@gmail.com | Телефон: +7 (778) 581-9575</p>
     </footer>
+
     <div type="button" class="serukopsa-lebtum">
         <div class="kanatesin-gtisan">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <span>Обратная<br>связь</span>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>Обратная<br>связь</span>
         </div>
     </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p>Это ваше всплывающее окно</p>
+            <button onclick="closePopup()">Закрыть</button>
+        </div>
+    </div>
+
 </body>
+
 </html>

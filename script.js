@@ -17,24 +17,86 @@ function showService(serviceId) {
     selectedService.classList.add('active');
 }
 
-let currentAchievementIndex = 0;
-const achievementsList = document.getElementById('achievements-list').querySelectorAll('li');
+let currentIndex = 0;
+const achievementItems = document.querySelectorAll('.achievement-item');
 
 function showAchievement(index) {
-    const translateValue = -index * 100 + '%';
-    document.getElementById('achievements-list').style.transform = 'translateX(' + translateValue + ')';
-    currentAchievementIndex = index;
+    achievementItems.forEach((item, i) => {
+        item.classList.toggle('hidden', i !== index);
+    });
 }
 
 function nextAchievement() {
-    currentAchievementIndex = (currentAchievementIndex + 1) % achievementsList.length;
-    showAchievement(currentAchievementIndex);
+    currentIndex = (currentIndex + 1) % achievementItems.length;
+    showAchievement(currentIndex);
 }
 
 function prevAchievement() {
-    currentAchievementIndex = (currentAchievementIndex - 1 + achievementsList.length) % achievementsList.length;
-    showAchievement(currentAchievementIndex);
+    currentIndex = (currentIndex - 1 + achievementItems.length) % achievementItems.length;
+    showAchievement(currentIndex);
 }
+
+function toggleContent(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.classList.toggle('hidden');
+}
+
 
 // Автоматическая смена достижений
 setInterval(nextAchievement, 5000); // Менять каждые 5 секунд
+
+// Открывает всплывающее окно
+function openPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
+
+// Закрывает всплывающее окно
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
+
+// Добавляет обработчик события для открытия всплывающего окна при клике на элемент
+document.querySelector(".serukopsa-lebtum").addEventListener("click", openPopup);
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Автоматическая смена достижений
+    setInterval(nextAchievement, 5000); // Менять каждые 5 секунд
+
+    // Открывает всплывающее окно
+    function openPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+    }
+
+    // Закрывает всплывающее окно
+    function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
+
+    // Добавляет обработчик события для открытия всплывающего окна при клике на элемент
+    document.querySelector(".serukopsa-lebtum").addEventListener("click", openPopup);
+
+    // Скрываем/показываем раздел достижений по клику
+    document.getElementById("achievements").addEventListener("click", function () {
+        toggleContent("achievements-list");
+    });
+
+    // Скрываем/показываем раздел обо мне по клику
+    document.getElementById("about-me").addEventListener("click", function () {
+        toggleContent("about-me-content");
+    });
+});
+
+function submitFeedback() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Здесь вы можете выполнить отправку данных на сервер, например, через AJAX или другим способом.
+
+    // Просто закроем всплывающее окно в качестве примера.
+    closePopup();
+}
