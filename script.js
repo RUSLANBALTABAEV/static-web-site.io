@@ -47,15 +47,43 @@ setInterval(nextAchievement, 5000); // Менять каждые 5 секунд
 
 // Открывает всплывающее окно
 function openPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
+    document.getElementById('popup').style.display = 'block';
 }
 
-// Закрывает всплывающее окно
 function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
+    document.getElementById('popup').style.display = 'none';
 }
+
+function submitForm(event) {
+    event.preventDefault();
+    
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:3000/submit-form', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                document.getElementById('response').innerHTML = 'Форма успешно отправлена!';
+            } else {
+                document.getElementById('response').innerHTML = 'Произошла ошибка при отправке формы.';
+            }
+        }
+    };
+
+    var data = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    xhr.send(JSON.stringify(data));
+}
+
 
 // Добавляет обработчик события для открытия всплывающего окна при клике на элемент
 document.querySelector(".serukopsa-lebtum").addEventListener("click", openPopup);
@@ -89,14 +117,3 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleContent("about-me-content");
     });
 });
-
-function submitFeedback() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Здесь вы можете выполнить отправку данных на сервер, например, через AJAX или другим способом.
-
-    // Просто закроем всплывающее окно в качестве примера.
-    closePopup();
-}

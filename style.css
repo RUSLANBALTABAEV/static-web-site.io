@@ -272,3 +272,7 @@ z-index: 1000;
 .popup-content {
 text-align: center;
 }
+
+#popup {
+  display: none;
+}

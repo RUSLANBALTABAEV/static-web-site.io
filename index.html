@@ -69,26 +69,39 @@
                 обеспечения масштабируемости и отказоустойчивости приложений.</p>
         </div>
     </section>
+     <!-- Форма обратной связи -->
+     <div class="popup" id="popup">
+        <div class="popup-content">
+            <form id="feedbackForm" onsubmit="submitForm(event)">
+                <label for="name">Имя:</label>
+                <input type="text" name="name" id="name" required><br>
 
-    <script src="script.js"></script>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br>
+
+                <label for="message">Сообщение:</label>
+                <textarea name="message" id="message" rows="4" required></textarea><br>
+
+                <input type="submit" value="Отправить">
+            </form>
+            <button onclick="closePopup()">Закрыть</button>
+        </div>
+    </div>
 
     <footer>
         <p>Email: ruslanotoriuos@gmail.com | Телефон: +7 (778) 581-9575</p>
     </footer>
 
-    <div type="button" class="serukopsa-lebtum">
+    <div type="button" class="serukopsa-lebtum" onclick="openPopup()">
         <div class="kanatesin-gtisan">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <span>Обратная<br>связь</span>
         </div>
     </div>
 
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <p>Это ваше всплывающее окно</p>
-            <button onclick="closePopup()">Закрыть</button>
-        </div>
-    </div>
+    <div id="response"></div>
+
+    <script src="script.js"></script>
 
 </body>
 
