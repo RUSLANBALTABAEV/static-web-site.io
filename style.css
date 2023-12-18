@@ -290,3 +290,7 @@ text-align: center;
 #popup {
   display: none;
 }
+
+.feedback-btn {
+  margin-right: 10px;
+}
