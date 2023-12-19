@@ -44,11 +44,6 @@ ul {
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
 .carousel-container {
   overflow: hidden;
 }
